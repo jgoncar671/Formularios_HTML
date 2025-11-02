@@ -1,0 +1,36 @@
+/* Color de fondo para toda la página */
+body {
+  background-color: #f0f8ff; /* Azul claro */
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilo para el h1 */
+h1 {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  color: #ff4500; /* Naranja fuerte */
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra para hacerlo más llamativo */
+  margin-top: 20px;
+}
+
+/* Efecto hover para el h1 */
+h1:hover {
+  color: #ff6347; /* Rojo tomate */
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+  transition: all 0.3s ease-in-out;
+}
+
+/* Estilo para los enlaces */
+a {
+  color: #1e90ff; /* Azul brillante */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Efecto hover para los enlaces */
+a:hover {
+  color: #ff4500; /* Naranja fuerte */
+  text-decoration: underline;
+  transition: color 0.3s ease-in-out;
+}

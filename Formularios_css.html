@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio html</title>
+        <meta charset="UTF-8">
+        <style>
+            .bloque{
+                background-color: yellow;
+                display: block;
+                width: 50%;
+                margin:auto;
+                border: 2px solid black;
+                padding: 10px;
+            }
+            .linea{
+                background-color: orange;
+                display: inline-block;
+                width: 50%;
+                margin:auto;
+                border: 2px solid black;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+
+<!--Formularios-->
+
+<!--Ejemplo de un formulario sencillo. Input tipo texto y radio-->
+<h2>Formularios</h2>
+<form>
+    Nombre:<br>
+    <input type="text" name="nombre"><br>
+    Apellido:<br>
+    <input type="text" name="apellido"><br>
+    <input type="radio" name="genero" value="masculino" checked>Masculino<br>
+    <input type="radio" name="genero" value="femenino">Femenino<br>
+</form>
+
+<hr>
+<br><br>
+
+<!--Ejemplo de un formulario con valores en los campos, y botón enviar-->
+<h3>Botón Enviar  y el atributo de acción. Método  POST</h3>
+<form action="https://educacionadistancia.juntadeandalucia.es/action_age.php" method="post">
+    <div class="bloque">Nombre:<br>
+    <input type="text" name="nombre" value="Rosa"><br>
+    Apellido:<br>
+    <input type="text" name="apellido" value="Ramos"><br><br>
+    <input type="submit" value="Enviar">
+    </div>
+</form>
+
+<br><br>
+<form action="https://educacionadistancia.juntadeandalucia.es/action_age.php" method="post">
+    <div class="linea">Nombre:<br>
+    <input type="text" name="nombre" value="Rosa">
+    Apellido:
+    <input type="text" name="apellido" value="Ramos">
+    <input type="submit" value="Enviar">
+    </div>
+</form>
+<br><br>
+<hr><br><br>
+
+
+<br>
+
+</body>
+
+
+
+</html>
+
+
+
+
+
+
+
+
+

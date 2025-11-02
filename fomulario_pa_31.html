@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+ 
+    <title>Mi primer formulario</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+      body{
+        margin: 20px 0 0 0;
+        font: Arial 14px;
+        color: black;
+        font-weight: bold; 
+        background-color: rgb(154, 171, 140);
+      }
+       form{
+         border:solid 3px #06315c; 
+         background:#dcdcdc; 
+         margin:0 auto; 
+         width:500px; 
+         padding:10px;
+         border-radius: 20px ;
+         /* offset-x | offset-y | color */
+        box-shadow: 15px -8px rgb(61, 131, 91); /*sombra */
+         
+        }
+      div#encabezado { 
+        text-align: center;
+        }
+      h1{
+        margin-top:5px
+        }
+      div#bloque{ /*Cada elemento del formulario va en una linea diferente*/ 
+        display: block;
+        clear: both;
+        margin: 15px 0 0 0;
+      }
+      #bloquecontenedor{ /*Contenedor de las tres capas que están en linea*/ 
+        display: block;
+        clear: both;
+         margin: 15px 0 0 0;
+        height: 120px; 
+        width: 100%;
+      }
+      div#linea label{
+          display: block;
+          clear: both;
+          border:dotted 1px rgb(49, 31, 151); 
+          margin-left:1px; 
+          margin-bottom: 10px; 
+          text-align: center; 
+          /*background-color: black;*/ 
+          color: black;
+          font-weight: bold;
+      }
+      
+      div#linea input{ 
+        display: inline;
+        width: 35%; 
+        clear: both;
+      }
+      div#linea{
+        display: inline;
+        clear: none; 
+        width: 32%; 
+        float: left;
+        margin: .4em 4px 0 0;
+        height: 100%;
+        border-right: dotted 1px darkgrey; 
+        border-left: dotted 1px darkgrey;
+      }
+      
+      div#bloque2 { /* última opción del formulario*/ 
+        display: block;
+        clear: both; margin: 14px 0 0 0;
+        border: 1px darkgrey dotted;
+        padding: 10px; 
+        }
+      div#bloque2 label{/* última opción del formulario*/
+       width: 90%;
+       display: inline; 
+      float: right;
+      }
+
+      div#bloque label { /* Etiqueta tres primeras filas*/
+        display:inline; 
+        font-weight:bold; 
+        text-align:right; 
+        width:100px; 
+        float:left;
+      }
+    div#bloque input{    /* Campo input tres primeras filas*/
+      float:left;
+      font-size:17px; 
+      padding:4px 2px; 
+      border:solid 1px #708090; 
+      width:310px;
+  
+      margin:2px 0 20px 10px;
+       }
+
+    .detalle{ /* Comentario tres primeras filas*/ 
+      color:#666666;
+      display:block;
+      font-size:11px;
+      font-weight:normal; 
+      text-align:right; 
+      width:100px;
+    }
+    div#bloquebotones{ /*Botones de envio*/ 
+      display: block;
+      clear: both;
+      text-align: center; 
+      margin: 15px 0 0 0;
+     }
+    div#bloquebotones input{ 
+      background:black;
+      color:white; 
+      font-weight: bold; 
+      width:145px; 
+      height:35px;
+      -moz-border-radius:10px;
+      -webkit-border-radius:10px;
+    /* Opcional - Bordes Redondeados
+    Solo funciona con Firefox / Safari / Google Chrome */
+    
+     }
+/* Hover a nuestro Botón
+No funciona en IE6 (Uno de los peores navegadores) */
+    div#bloquebotones input:hover{
+      background:#1b4bdb; 
+      color:#8ec0b5;
+    }
+  </style>
+</head>
+
+
+<body>
+    <body>
+      <form name="formul1" id="formul1" method="post" action="pagina-destino.php"> 
+        <div class="encabezado">
+        <h1>Formulario</h1>
+        </div>
+        <div id="bloque">
+        <label for="nombre">Nombre <span class="detalle">Ingrese su nombre</span></label>
+         <input type="text" name="nombre" id="name" />
+        </div>
+        <div id="bloque">
+        <label for="email">Email<span class="detalle">Ingrese su email</span></label> 
+        <input type="text" id="email" name="email" size="50" />
+        </div>
+        <div id="bloque">
+        <label for="contrasena">Contraseña <span class="detalle">Mínimo 6 caracteres</span>  
+        </label>
+        <input type="password" id="contrasena" name="contrasena" />
+        </div>
+        <div id="bloquecontenedor"> <div id="linea">
+        <label for="estudios">Estudios</label>
+        <input id="estudios" name="estudios" type="checkbox"> ESO</input>
+        <input id="estudios" name="estudios2" type="checkbox"> Bachillerato</input> 
+        <input id="estudios" name="estudios3" type="checkbox" checked=""> Ciclos</input> 
+        <input id="estudios" name="estudios4" type="checkbox"> Universidad</input>
+        </div>
+        <div id="linea">
+        <label for="sexo">Sexo</label>
+        <input id="sexo" name="sexo" name="sexo" value="hombre" type="radio">Hombre</input>
+         <input id="sexo" name="sexo" name="sexo" value="mujer" type="radio" checked="">Mujer</input>
+        </div>
+        <div id="linea">
+        <label for="tarjeta">Tarjeta</label>
+        <select id="tarjeta" name="tarjeta" >
+          <option value="visa" selected>Visa</option>
+          <option value="master">Master-Card</option> 
+        </select>
+        </div>
+        </div>
+        <div id="bloque2">
+            <input type="checkbox" id="recordar" name="recordar">
+            <label for="recordar">Recordar mi nombre de usuario en esta computadora</label> 
+        </div>
+        <div id="bloquebotones">
+          <input type="submit" value="Darme de alta" /> 
+          <input value="Borrar!" type="reset"/>
+        </div>
+         </form>
+</body>
+
+</html>

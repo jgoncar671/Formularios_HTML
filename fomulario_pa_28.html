@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+ 
+    <title>Mi primer formulario</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+/*      body{
+      margin: 20;
+      font: Arial 14px; 
+      color: white;
+      font-weight: bold; 
+      background-color: lightgrey;
+      } 
+
+*/	body {
+
+ 	
+      font: Arial 14px; 
+      color: white;
+      font-weight: bold;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f3f3f3;
+    }
+
+    form {
+      padding: 20px;
+     
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+      form{
+          margin:  auto;
+          background: darkblue;
+          border:solid black 2px;
+          width: 600px; /*Tamaño fijo del formulario*/ 
+          padding: 10px;
+          }
+     div {
+        display: block;
+        clear: both; /* Todos los div son tipo bloques para que estén en una linea diferente*/ margin: 10px 0 0 0;
+      }
+      div label {
+      display: inline;
+      width: 20%; /*Tamaño de la etiqueta y posición izquierda el resto se ocupará por el INPUT*/
+      float: left; 
+      }
+	
+
+  </style>
+</head>
+
+
+<body>
+    <body>
+        <form id="formul1" name="formul1" method="post" action="pagina-destino.php"> <fieldset>
+        <legend>Alta en el servicio</legend>
+         <div>
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" /> </div>
+        <div>
+          <label for="apellidos">Apellidos</label>
+          <input type="text" id="apeliidos "name="apellidos" size="50" />
+        </div> 
+        <div>
+        <label for="dni">DNI</label>
+        <input type="text" id="dni" name="dni" size="10" maxlength="9" />
+        </div>
+         <div>
+          <label for="contrasena">Contraseña</label>
+          <input type="password" id="contrasena" name="contrasena" /> </div>
+        <div>
+          <label for="comentarios">Comentarios</label> 
+    
+          <textarea cols="40" rows="5" id="comentarios" name="comentarios"></textarea> 
+      </div>
+        <div >
+        <label for="estudios">Estudios</label>
+        <input id="estudios" name="estudios" type="checkbox"> ESO</input>
+        <input id="estudios" name="estudios2" type="checkbox"> Bachillerato</input> 
+        <input id="estudios" name="estudios3" type="checkbox" checked=""> 
+        Ciclos  Formativos</input>
+        <input id="estudios" name="estudios4" type="checkbox"> Universidad</input>
+        </div> 
+        <div >
+        <label for="sexo">Sexo</label>
+        <input id="sexo" name="sexo" value="mujer" type="radio" checked="">Mujer</input>
+        <input id="sexo" name="sexo" value="hombre" type="radio">Hombre</input>
+        </div> 
+        
+        <div>
+          <label for="tarjeta">Tarjeta</label> 
+          <select id="tarjeta" name="tarjeta">
+            <option value="visa" selected>Visa</option>
+            <option value="master">Master-Card</option> </select>
+        </div> 
+        <div>
+          <input type="submit" value="Darme de alta" /> 
+          <input value="Borrar!" type="reset">
+        </div>
+       </fieldset> 
+      </form>
+</body>
+
+</html>
